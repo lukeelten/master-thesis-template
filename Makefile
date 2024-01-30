@@ -1,6 +1,7 @@
 TARGET = thesis
 LATEX = lualatex
-FLAGS = -synctex=1 -shell-escape
+FLAGS = --synctex=1 --shell-escape --interaction=batchmode
+TMP_DIR = temp
 
 .PHONY: all tidy clean
 
@@ -8,8 +9,8 @@ all: $(TARGET).pdf
 
 $(TARGET).pdf: fiwthesis.cls $(TARGET).tex anlagen/ kapitel/ verzeichnisse/ quellen.bib
 	$(LATEX) $(FLAGS) $(TARGET)
-	biber $(TARGET)
-	makeglossaries $(TARGET)
+	biber -q $(TARGET)
+	makeglossaries -q $(TARGET)
 	$(LATEX) $(FLAGS) $(TARGET)
 	$(LATEX) $(FLAGS) $(TARGET)
 	$(LATEX) $(FLAGS) $(TARGET)

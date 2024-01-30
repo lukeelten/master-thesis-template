@@ -83,14 +83,14 @@
 % \RequirePackage{caption}
 
 % page geometry
-\RequirePackage[
-  left=3cm,
-  right=3cm,
-  top=1.5cm,
-  bottom=1.5cm,
-  includeheadfoot,
-  % bindingoffset=0,
-]{geometry}
+%\RequirePackage[
+%  left=3cm,
+%  right=3cm,
+%  top=1.5cm,
+%  bottom=1.5cm,
+%  includeheadfoot,
+%  % bindingoffset=0,
+%]{geometry}
 
 % code listings
 \RequirePackage[newfloat=true]{minted}
@@ -157,14 +157,14 @@
 \RequirePackage{etoolbox}
 
 % file trees
-\RequirePackage{dirtree}
+%\RequirePackage{dirtree}
 
 \RequirePackage{setspace}
 
-\RequirePackage{algorithm}
-\RequirePackage{algorithmic}
+%\RequirePackage{algorithm}
+%\RequirePackage{algorithmic}
 
-\RequirePackage{xparse}
+%\RequirePackage{xparse}
 
 \if@en
   \RequirePackage[english]{selnolig}
@@ -700,35 +700,35 @@
 
 % algorithms
 % TODO translate this
-\renewcommand{\ALG@name}{Algorithmus}
+%\renewcommand{\ALG@name}{Algorithmus}
 
-\renewcommand{\listalgorithmname}{Algorithmenverzeichnis}
+%\renewcommand{\listalgorithmname}{Algorithmenverzeichnis}
 
-\algsetup{
-  linenosize=\small,
-  linenodelimiter=.
-}
+%\algsetup{
+%  linenosize=\small,
+%  linenodelimiter=.
+%}
 
-\renewcommand{\algorithmicrequire}{\textbf{Benötigt:}}
-\renewcommand{\algorithmicensure}{\textbf{Ergebnis:}}
-\renewcommand{\algorithmicend}{\textbf{Ende}}
-\renewcommand{\algorithmicif}{\textbf{Wenn}}
-\renewcommand{\algorithmicthen}{\textbf{Dann}}
-\renewcommand{\algorithmicelse}{\textbf{Sonst}}
-\renewcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
-\renewcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
-\renewcommand{\algorithmicfor}{\textbf{Für}}
-\renewcommand{\algorithmicforall}{\textbf{Für alle}}
-\renewcommand{\algorithmicdo}{\textbf{Tue}}
-\renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
-\renewcommand{\algorithmicwhile}{\textbf{Solange}}
-\renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
-\renewcommand{\algorithmicloop}{\textbf{Schleife}}
-\renewcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
-\renewcommand{\algorithmicto}{\textbf{bis}}
-\renewcommand{\algorithmicrepeat}{\textbf{Wiederhole}}
-\renewcommand{\algorithmicuntil}{\textbf{Bis}}
-\renewcommand{\algorithmicprint}{\textbf{Drucke}}
-\renewcommand{\algorithmicreturn}{\textbf{Rückgabe}}
-\renewcommand{\algorithmictrue}{\textbf{Wahr}}
-\renewcommand{\algorithmicfalse}{\textbf{Falsch}}
+%\renewcommand{\algorithmicrequire}{\textbf{Benötigt:}}
+%\renewcommand{\algorithmicensure}{\textbf{Ergebnis:}}
+%\renewcommand{\algorithmicend}{\textbf{Ende}}
+%\renewcommand{\algorithmicif}{\textbf{Wenn}}
+%\renewcommand{\algorithmicthen}{\textbf{Dann}}
+%\renewcommand{\algorithmicelse}{\textbf{Sonst}}
+%\renewcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
+%\renewcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+%\renewcommand{\algorithmicfor}{\textbf{Für}}
+%\renewcommand{\algorithmicforall}{\textbf{Für alle}}
+%\renewcommand{\algorithmicdo}{\textbf{Tue}}
+%\renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+%\renewcommand{\algorithmicwhile}{\textbf{Solange}}
+%\renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+%\renewcommand{\algorithmicloop}{\textbf{Schleife}}
+%\renewcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
+%\renewcommand{\algorithmicto}{\textbf{bis}}
+%\renewcommand{\algorithmicrepeat}{\textbf{Wiederhole}}
+%\renewcommand{\algorithmicuntil}{\textbf{Bis}}
+%\renewcommand{\algorithmicprint}{\textbf{Drucke}}
+%\renewcommand{\algorithmicreturn}{\textbf{Rückgabe}}
+%\renewcommand{\algorithmictrue}{\textbf{Wahr}}
+%\renewcommand{\algorithmicfalse}{\textbf{Falsch}}
