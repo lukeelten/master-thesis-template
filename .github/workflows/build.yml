@@ -15,6 +15,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+#      - name: Commit ID
+#        id: commit
+#        uses: prompt/actions-commit-hash@v3
       - uses: xu-cheng/texlive-action@v2
         name: Build PDF
         with:
@@ -27,6 +30,10 @@ jobs:
         name: Upload PDF
         with:
           artifacts: "thesis.pdf"
+          artifactContentType: pdf
+          artifactErrorsFailBuild: true
+          makeLatest: true
+          commit: ${{ github.sha }}
           body: |
             Compiled PDF
             Hash of all Latex files ${{ hashFiles('**.tex') }}
