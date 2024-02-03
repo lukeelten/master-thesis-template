@@ -34,7 +34,7 @@ jobs:
           artifactErrorsFailBuild: true
           makeLatest: true
           commit: ${{ github.sha }}
-          tag: Test Tag
+          tag: latest
           body: |
             Compiled PDF
             Hash of all Latex files ${{ hashFiles('**.tex') }}
