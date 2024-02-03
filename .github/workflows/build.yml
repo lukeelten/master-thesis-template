@@ -21,7 +21,7 @@ jobs:
           scheme: full
           run: |
             apk add make
-            make pdf
+            make build
 
       - uses: ncipollo/release-action@v1
         name: Upload PDF
