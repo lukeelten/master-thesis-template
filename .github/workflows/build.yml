@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
-      contents: read
-      packages: write
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,9 +21,12 @@ jobs:
           scheme: full
           run: |
             apk add make
-            make
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+            make pdf
+
+      - uses: ncipollo/release-action@v1
+        name: Upload PDF
         with:
-          name: PDF
-          path: thesis.pdf
+          artifacts: "thesis.pdf"
+          body: |
+            Compiled PDF
+            Hash of all Latex files ${{ hashFiles('**.tex') }}
