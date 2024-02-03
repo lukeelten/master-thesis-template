@@ -13,11 +13,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      # Checkout Repository
       - name: Checkout repository
         uses: actions/checkout@v4
-#      - name: Commit ID
-#        id: commit
-#        uses: prompt/actions-commit-hash@v3
+
+      # Build Latex File
       - uses: xu-cheng/texlive-action@v2
         name: Build PDF
         with:
@@ -26,6 +26,7 @@ jobs:
             apk add make
             make build
 
+      # Upload PDF as latest release
       - uses: ncipollo/release-action@v1
         name: Upload PDF
         with:
@@ -34,7 +35,7 @@ jobs:
           artifactErrorsFailBuild: true
           makeLatest: true
           commit: ${{ github.sha }}
-          tag: latest
+          tag: Thesis
           body: |
             Compiled PDF
             Hash of all Latex files ${{ hashFiles('**.tex') }}
