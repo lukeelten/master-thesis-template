@@ -1,0 +1,30 @@
+name: Create and publish a Docker image
+
+on:
+  push:
+    branches:
+      - 'main'
+
+# There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      - name: Github Action for LaTeX
+        uses: xu-cheng/latex-action@3.1.0
+        with:
+          root_file: |
+            thesis.tex
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF
+          path: thesis.pdf
