@@ -5,7 +5,9 @@ TMP_DIR = temp
 
 .PHONY: all tidy clean
 
-all: $(TARGET).pdf
+all: $(TARGET).pdf tidy
+
+build: $(TARGET).pdf
 
 $(TARGET).pdf: fiwthesis.cls $(TARGET).tex anlagen/ kapitel/ verzeichnisse/ quellen.bib
 	$(LATEX) $(FLAGS) $(TARGET)
