@@ -16,7 +16,7 @@ jobs:
       # Get date
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       # Checkout Repository
       - name: Checkout repository
@@ -41,8 +41,8 @@ jobs:
           makeLatest: true
           commit: ${{ github.sha }}
           tag: ${{ steps.date.outputs.date }}-${{ github.run_number }}
+          name: Build ${{ steps.date.outputs.date }} / ${{ github.run_number }}
           body: |
             Compiled PDF
             Hash of all Latex files: ${{ hashFiles('**.tex') }}
             Hash of PDF: ${{ hashFiles('thesis.pdf') }}
-
